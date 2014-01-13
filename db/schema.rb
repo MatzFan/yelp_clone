@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113124846) do
+ActiveRecord::Schema.define(version: 20140113144527) do
 
   create_table "restaurants", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "promoted"
   end
 
 end

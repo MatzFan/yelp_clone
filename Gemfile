@@ -18,6 +18,7 @@ end
 group :development do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'database_cleaner' # lets you run rspec instead of bin/rake rspec
 end
 
 # Use SCSS for stylesheets

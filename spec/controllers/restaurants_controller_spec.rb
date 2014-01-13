@@ -75,9 +75,9 @@ describe RestaurantsController do
         assigns(:restaurant).should be_persisted
       end
 
-      it "redirects to the created restaurant" do
+      it "redirects to /restaurants" do
         post :create, {:restaurant => valid_attributes}, valid_session
-        response.should redirect_to(Restaurant.last)
+        response.should redirect_to(restaurants_url)
       end
     end
 
@@ -116,10 +116,10 @@ describe RestaurantsController do
         assigns(:restaurant).should eq(restaurant)
       end
 
-      it "redirects to the restaurant" do
+      it "redirects to the restaurants page" do
         restaurant = Restaurant.create! valid_attributes
         put :update, {:id => restaurant.to_param, :restaurant => valid_attributes}, valid_session
-        response.should redirect_to(restaurant)
+        response.should redirect_to(restaurants_url)
       end
     end
 
