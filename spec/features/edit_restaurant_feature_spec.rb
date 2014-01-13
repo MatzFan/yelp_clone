@@ -8,10 +8,9 @@ describe "Editing restaurants" do
 
     it "should update the relevant parameter" do
       visit edit_restaurant_path(restaurant)
-      expect :success # tests get request for the route
       fill_in 'Name', with: 'Burger King'
       click_button 'Update Restaurant'
-      expect(current_path).to eq('/restaurants')
+      expect(current_path).to eq(restaurants_path)
       expect(page).to have_content('Burger King')
     end
 
