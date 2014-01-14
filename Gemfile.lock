@@ -54,6 +54,8 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
+    foreigner (1.6.1)
+      activerecord (>= 3.0.0)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -85,6 +87,7 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
+    railroady (1.1.1)
     rails (4.1.0.beta1)
       actionmailer (= 4.1.0.beta1)
       actionpack (= 4.1.0.beta1)
@@ -165,12 +168,14 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   database_cleaner
+  foreigner
   jbuilder (~> 1.2)
   jquery-rails
   mysql2
   pg
   pry
   pry-rails
+  railroady
   rails (= 4.1.0.beta1)
   rails_12factor
   rspec-rails
