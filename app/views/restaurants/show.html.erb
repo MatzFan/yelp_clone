@@ -10,5 +10,8 @@
   <%= @restaurant.description %>
 </p>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Edit', restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
+<br>
+<!-- new beacuse it is a new review.... -->
+<%= link_to 'Create Review', new_restaurant_review_path(@restaurant) %>
