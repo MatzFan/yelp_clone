@@ -21,6 +21,8 @@ group :development do
   gem 'database_cleaner' # lets you run rspec instead of bin/rake rspec
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry'
+  gem 'pry-rails'
 end
 
 # Use SCSS for stylesheets
