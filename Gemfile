@@ -8,10 +8,14 @@ gem 'rails', '4.1.0.beta1'
 # for user authentication
 gem 'devise'
 
+# for front end!
+gem "twitter-bootstrap-rails"
+
 # Use mysql as the database for Active Record
 group :test, :development do
   gem 'mysql2'
   gem 'foreigner'
+  gem 'immigrant'
 end
 
 group :production do
