@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews
   # GET /reviewss.json
@@ -26,11 +26,12 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(review_params)
+    restaurant = Restaurant.find(params[:restaurant_id])
+    @review = restaurant.reviews.build(review_params)
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to review_url, notice: 'Review was successfully created.' }
+        format.html { redirect_to [restaurant, @review], notice: 'Review was successfully created.' }
         format.json { render action: 'show', status: :created, location: @review }
 
       else
