@@ -11,5 +11,19 @@ require 'spec_helper'
 #   end
 # end
 describe ReviewsHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+
+  let(:review_5) { Review.new rating: 5 }
+  let(:review_2) { Review.new rating: 2 }
+
+  describe '.star_rating' do
+    it 'should return 5 stars for a review rated 5' do
+      expect(helper.star_rating(review_5)).to eq "\u2605" * 5
+    end
+
+    it 'should return 2 stars for a review rated 2' do
+      expect(helper.star_rating(review_2)).to eq "\u2605" * 2 << "\u2606" * 3
+    end
+
+  end
+
+end # of describe

@@ -14,4 +14,5 @@ describe "restaurants/show" do
     rendered.should match(/Name/)
     rendered.should match(/MyText/)
   end
-end
+
+end # of describe

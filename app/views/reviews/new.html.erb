@@ -1,8 +1,13 @@
 
 <%= form_for [@restaurant, @review] do |f| %>
+
+  <p>
+    <Strong><%= @restaurant.name %></Strong>
   <p>
   <%= f.label :content %>
   <%= f.text_area :content, size: 40 %>
-  <%= f.submit "Create" %>
+  <%= f.label :rating %>
+  <%= f.select :rating, rating_range %>
+  <%= f.submit "Save" %>
   </p>
 <% end %>

@@ -11,14 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115163705) do
+ActiveRecord::Schema.define(version: 20140116105121) do
 
   create_table "restaurants", force: true do |t|
-    t.string   "name"
+    t.string   "name",        null: false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "promoted"
+    t.string   "image_url"
+    t.string   "address",     null: false
   end
 
   create_table "reviews", force: true do |t|
@@ -27,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140115163705) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "rating"
   end
 
   add_index "reviews", ["restaurant_id"], name: "index_reviews_on_restaurant_id", using: :btree

@@ -32,6 +32,7 @@ group :development do
   gem 'pry'
   gem 'pry-rails'
   gem 'railroady'
+  gem 'factory_girl_rails'
 end
 
 # Use SCSS for stylesheets
