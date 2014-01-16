@@ -11,6 +11,9 @@ gem 'devise'
 # for front end!
 gem "twitter-bootstrap-rails"
 
+# got Google maps API
+gem 'geocoder'
+
 # Use mysql as the database for Active Record
 group :test, :development do
   gem 'mysql2'
